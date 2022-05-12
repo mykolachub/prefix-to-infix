@@ -61,3 +61,23 @@ func TestAdvancedFour(t *testing.T) {
 		assert.Equal(t, "(8+(((5-2)-3)/(((2/3)*6)^7)))", res)
 	}
 }
+
+func TestErrorOne(t *testing.T) {
+	_, err := PrefixToInfix("+ 1")
+	assert.NotNil(t, err)
+}
+
+func TestErrorTwo(t *testing.T) {
+	_, err := PrefixToInfix("^ / * + 1")
+	assert.NotNil(t, err)
+}
+
+func TestErrorThree(t *testing.T) {
+	_, err := PrefixToInfix(" ")
+	assert.NotNil(t, err)
+}
+
+func TestErrorFour(t *testing.T) {
+	_, err := PrefixToInfix("5 6 7 8")
+	assert.NotNil(t, err)
+}
