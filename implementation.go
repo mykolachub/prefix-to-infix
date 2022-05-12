@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func PrefixToPostfix(input string) (string, error) {
+func PrefixToInfix(input string) (string, error) {
 	prefixArray := strings.Split(input, " ")
 
 	stack := make([]string, 0)
