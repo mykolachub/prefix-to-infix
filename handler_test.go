@@ -24,7 +24,7 @@ func TestEmpty(t *testing.T) {
 }
 
 func TestSimple(t *testing.T) {
-	input := strings.NewReader("+ 2 2")
+	input := strings.NewReader("")
 	output := bytes.NewBufferString("")
 
 	handler := &ComputeHandler{
